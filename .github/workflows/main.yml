@@ -65,7 +65,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull pashpiter/infra_actions:latest
+            sudo docker pull pashpiter/infra_actions
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker run --rm -d -p 5000:5000 pashpiter/infra_actions:latest
